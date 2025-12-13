@@ -1,0 +1,136 @@
+/* --- Color Palette Variables --- */
+:root {
+    --color-forest-green: #223724; /* Deep Forest Green (Background) */
+    --color-burgundy: #6A050D;     /* Deep Burgundy (Primary Text/Accents) */
+    --color-gold-accent: #C49F3D;  /* Gold/Bronze (Highlight/Borders) */
+    --color-parchment: #FCF5E5;    /* Antique White (Parchment Background) */
+    --color-dark-text: #2c2a2a;    /* Dark text for inside parchment */
+}
+
+/* --- Global Styles: Dark Academia Theme --- */
+body {
+    font-family: 'Merriweather', serif; /* Body text: classic, readable serif */
+    background-color: var(--color-forest-green);
+    color: var(--color-parchment); /* Light text for main body (Header) */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* Scrollbar (Thematically appropriate) */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-burgundy);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--color-forest-green);
+}
+
+/* --- Header & Titles --- */
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: var(--color-burgundy); /* Burgundy header band */
+    color: var(--color-parchment);
+    border-bottom: 5px solid var(--color-gold-accent);
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: 'Lora', serif; /* Title font: more distinguished/scholarly */
+    font-size: 3em;
+    margin-bottom: 0.1em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+header h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--color-gold-accent);
+}
+
+/* --- Main Content Layout --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Parchment Box Style (Crucial Aesthetic) --- */
+.parchment-box {
+    background-color: var(--color-parchment);
+    color: var(--color-dark-text); /* Dark text on light parchment */
+    padding: 40px;
+    margin-bottom: 50px;
+    border: 3px solid var(--color-gold-accent); /* Gold/Bronze Border */
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6), /* Subtle Shadow */
+                -5px -5px 15px rgba(0, 0, 0, 0.3);
+    /* Subtle paper/texture effect using a gradient (optional but enhances theme) */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 0);
+    background-size: 5px 5px;
+}
+
+/* Headings within the Parchment Box */
+.parchment-box h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8em;
+    color: var(--color-burgundy); /* Section titles in Burgundy */
+    border-bottom: 2px solid var(--color-gold-accent);
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.parchment-box h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5em;
+    color: var(--color-burgundy);
+    margin-top: 0;
+}
+
+.parchment-box h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    color: var(--color-gold-accent); /* Strategic Priority in Gold */
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.parchment-box p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+/* Links and References */
+.parchment-box a {
+    color: var(--color-burgundy);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--color-gold-accent);
+    transition: color 0.3s;
+}
+
+.parchment-box a:hover {
+    color: var(--color-gold-accent);
+    border-bottom: 1px solid var(--color-burgundy);
+}
+
+/* References List Formatting */
+.references-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+.references-list li {
+    margin-bottom: 15px;
+    text-indent: -20px; /* Hanging indent effect */
+    padding-left: 20px;
+}
